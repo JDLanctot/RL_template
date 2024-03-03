@@ -1,2 +1,2 @@
-# CO2_ML
-Machine Learning Practice with a CO2 Emissions dataset.
+# RL Template
+A starting point for Single Player Reinforcement Learning.
