@@ -1,0 +1,29 @@
+name: co2
+
+channels:
+  - nvidia
+  - pytorch
+  - conda-forge
+  - defaults
+
+dependencies:
+  - nvidia::cuda-toolkit>=12.0
+  - ipdb
+  - ipython
+  - gym
+  - matplotlib
+  - numpy
+  - pandas
+  - pip
+  - python
+  - pytorch::pytorch>=1.12.1
+  - pytorch::pytorch-cuda>=12.0
+  - pyyaml
+  - scipy
+  - tslearn
+  - tqdm
+  - pip:
+      - abstractcp
+      - more-itertools
+      - simple-parsing
+      - wurlitzer

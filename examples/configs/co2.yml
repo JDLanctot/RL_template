@@ -1,0 +1,40 @@
+prob: co2
+device: cuda
+net:
+  depth: 5
+  embed_dim: 64
+  graph_agg: sum
+  nbr_agg: sum
+replay:
+  capacity: 500_000
+  step_diff: 1
+training:
+  seed_n_low: 0
+  seed_n_high: 0
+  batch_size: 128
+  max_epochs: 600_000
+  eps_start: 1.0
+  eps_end: 0.05
+  eps_anneal_epochs: 10_000
+  df: 1.0
+  num_burn_in: 100
+  rollout_freq: 100
+  num_play: 1_000
+  validation_freq: 10_000
+  target_update_freq: 1_000
+  train_set_update_freq: 50_000
+  train_set_size: 10_000
+  validation_set_size: 1_000
+  entropy_coeff: 1.0e-1
+  max_grad_norm: 1.0
+  gradient_accumulation: True
+  optimizer: 'adam'
+  optimizer_kwargs:
+    lr: 1.0e-4
+  plotting: True
+testing:
+  batch_size: 32
+  max_experiments: 100
+  test_set_size: 100
+  plotting: True
+
